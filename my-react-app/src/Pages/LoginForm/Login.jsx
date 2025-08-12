@@ -8,8 +8,9 @@ const Login = () => {
     <div className="wrapper"> 
     <form action="">
         <h1>Login</h1>
-        <div className="role" placeholder="Role">
-            <select required>
+        <div className="dropdown">
+            <label htmlFor="role">Select Role: </label>
+            <select required placeholder="Role">
                 <option value="admin">Admin</option>
                 <option value="doctor">Doctor</option>
                 <option value="receptionist">Receptionist</option>

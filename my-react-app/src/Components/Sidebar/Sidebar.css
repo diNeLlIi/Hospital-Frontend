@@ -1,0 +1,59 @@
+.wellcare-sidebar {
+  width: 200px;
+  height: calc(100vh - 70px);
+  background-color: #ffffff;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  left: 0;
+  top: 70px;
+  padding: 1.5rem 0;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  display: block;
+  padding: 0.8rem 2rem;
+  color: #4a5568;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  background-color: #ebf8ff;
+  color: #2b6cb0;
+}
+
+.menu-item.active {
+  background-color: #bee3f8;
+  color: #2b6cb0;
+  border-left: 4px solid #3182ce;
+  font-weight: 600;
+}
+
+/* Add these to your existing Sidebar.css */
+.menu-item {
+  display: flex; /* Changed from block to flex */
+  align-items: center; /* Vertically center items */
+  padding: 0.8rem 1.5rem; /* Slightly reduced padding */
+}
+
+.menu-icon {
+  margin-right: 12px; /* Space between icon and text */
+  font-size: 1.2rem; /* Icon size */
+  display: inline-flex; /* Proper icon alignment */
+  align-items: center;
+  color: inherit; /* Inherit parent color */
+}
+
+/* Ensure icons change color on hover/active */
+.menu-item:hover .menu-icon,
+.menu-item.active .menu-icon {
+  color: inherit;
+}
