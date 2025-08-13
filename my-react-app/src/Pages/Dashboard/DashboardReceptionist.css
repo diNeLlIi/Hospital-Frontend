@@ -48,10 +48,13 @@
   font-weight: 700;
 }
 
-/* Tables */
-.table-container {
-  overflow-x: auto;
+/* Scrollable Tables */
+.scrollable-table-container {
+  max-height: 210px; /* Shows exactly 3 rows */
+  overflow-y: auto;
   margin-top: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
 }
 
 .data-table {
@@ -66,12 +69,16 @@
   text-align: left;
   color: #4a5568;
   font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .data-table td {
   padding: 0.75rem 1rem;
   border-bottom: 1px solid #e2e8f0;
   color: #4a5568;
+  height: 50px;
 }
 
 /* Status Badges */
@@ -139,14 +146,12 @@
   margin-top: 1.5rem;
 }
 
-/* Small Sections */
 .dashboard-section.small {
   min-height: 200px;
   display: flex;
   flex-direction: column;
 }
 
-/* Quick Actions */
 .quick-actions {
   display: flex;
   flex-direction: column;
@@ -162,19 +167,35 @@
   margin: 0.5rem 0;
 }
 
+/* Scrollbar Styling */
+.scrollable-table-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.scrollable-table-container::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 4px;
+}
+
+.scrollable-table-container::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .dashboard-row {
+  .dashboard-row,
+  .stats-grid {
     grid-template-columns: 1fr;
   }
   
   .dashboard-section.small {
     min-height: auto;
     padding: 1rem !important;
-  }
-  
-  .stats-grid {
-    grid-template-columns: 1fr;
   }
   
   .dashboard-scroll-container {

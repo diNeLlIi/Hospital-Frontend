@@ -28,7 +28,7 @@ const Dashboard = () => {
         {/* Appointments Table Section */}
         <div className="dashboard-section">
           <h2 className="section-title">Appointments</h2>
-          <div className="table-container">
+          <div className="scrollable-table-container">
             <table className="data-table">
               <thead>
                 <tr>
@@ -54,6 +54,20 @@ const Dashboard = () => {
                   <td><span className="status-badge pending">Pending</span></td>
                   <td><button className="action-btn edit">Edit</button></td>
                 </tr>
+                <tr>
+                  <td>2025-06-10</td>
+                  <td>1:00 PM</td>
+                  <td>Emily Tran</td>
+                  <td><span className="status-badge confirmed">Confirmed</span></td>
+                  <td><button className="action-btn edit">Edit</button></td>
+                </tr>
+                <tr>
+                  <td>2025-06-11</td>
+                  <td>3:30 PM</td>
+                  <td>Michael Lee</td>
+                  <td><span className="status-badge confirmed">Confirmed</span></td>
+                  <td><button className="action-btn edit">Edit</button></td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -62,7 +76,7 @@ const Dashboard = () => {
         {/* Doctors Availability Section */}
         <div className="dashboard-section">
           <h2 className="section-title">Doctors Availability</h2>
-          <div className="table-container">
+          <div className="scrollable-table-container">
             <table className="data-table">
               <thead>
                 <tr>
@@ -73,6 +87,12 @@ const Dashboard = () => {
                 </tr>
               </thead>
               <tbody>
+                <tr>
+                  <td>Dr. Fernando</td>
+                  <td>Cardiologist</td>
+                  <td>9 AM - 1 PM</td>
+                  <td><button className="action-btn view">View</button></td>
+                </tr>
                 <tr>
                   <td>Dr. Patel</td>
                   <td>Dermatologist</td>
@@ -85,6 +105,12 @@ const Dashboard = () => {
                   <td>10 AM - 3 PM</td>
                   <td><button className="action-btn view">View</button></td>
                 </tr>
+                <tr>
+                  <td>Dr. Nguyen</td>
+                  <td>Neurologist</td>
+                  <td>2 PM - 6 PM</td>
+                  <td><button className="action-btn view">View</button></td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -92,13 +118,10 @@ const Dashboard = () => {
 
         {/* Bottom Row Sections */}
         <div className="dashboard-row">
-          {/* Canceled Appointments */}
           <div className="dashboard-section small centered-section">
             <h3>Canceled Appointments</h3>
             <p className="large-stat">13</p>
           </div>
-
-          {/* Quick Actions */}
           <div className="dashboard-section small centered-section">
             <h3>Quick Actions</h3>
             <div className="quick-actions">
