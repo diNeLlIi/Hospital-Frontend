@@ -21,7 +21,7 @@ const HomePage = () => {
 
         <button 
           className="login-btn"
-          onClick={() => navigate('/login')} // Fixed: onClick instead of nClick
+          onClick={() => navigate('/login')} 
         >
           Login
         </button>

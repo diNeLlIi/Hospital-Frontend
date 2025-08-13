@@ -1,3 +1,10 @@
+/* Main Scroll Container */
+.dashboard-scroll-container {
+  height: calc(100vh - 150px); /* Adjust based on your header height */
+  overflow-y: auto;
+  padding: 20px;
+}
+
 /* Dashboard Section Styles */
 .dashboard-section {
   background: white;
@@ -114,17 +121,6 @@
   color: white;
 }
 
-.action-btn.book {
-  background: #4299e1;
-  color: white;
-  width: 100%;
-}
-
-.action-btn:hover {
-  opacity: 0.9;
-  transform: translateY(-1px);
-}
-
 /* Dashboard Row Layout */
 .dashboard-row {
   display: grid;
@@ -151,24 +147,22 @@
   margin-top: 1rem;
 }
 
-.book-actions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
-  margin-top: 1rem;
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .stats-grid,
+  .dashboard-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-
-/* Fixed header scrollable table */
-.appointments-container {
-  max-height: 400px;
-  overflow-y: auto;
-  position: relative;
-}
-
-.data-table thead th {
-  position: sticky;
-  top: 0;
-  background: #edf2f7;
-  z-index: 10;
+@media (max-width: 768px) {
+  .stats-grid,
+  .dashboard-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard-scroll-container {
+    height: calc(100vh - 120px);
+    padding: 15px;
+  }
 }
