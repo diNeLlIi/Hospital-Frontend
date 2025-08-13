@@ -118,3 +118,13 @@
     font-weight: 700; 
     
 }
+
+.error-message {
+  color: #ff6b6b;
+  background: rgba(255, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px solid #ff6b6b;
+}
