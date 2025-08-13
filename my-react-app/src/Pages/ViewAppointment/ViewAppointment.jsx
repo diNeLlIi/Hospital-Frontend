@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Layout from "../../Components/Layout/Layout";
 import "./ViewAppointment.css";
-import doctorImg from "../../Components/Assets/docImg.png"; // Add doctor image in Assets
+import doctorImg from "../../Components/Assets/docImg.png"; 
 
 const Appointment = () => {
   const [selectedDate, setSelectedDate] = useState("06 June 2025");
@@ -35,7 +35,7 @@ const Appointment = () => {
     <Layout pageTitle="Appointment">
       <div className="appointment-container">
         <div className="appointment-header">
-          <h2>New Appointment</h2>
+         
           <div className="appointment-tabs">
             <span className="active-tab">New Appointment</span>
             <span>View Appointment</span>
