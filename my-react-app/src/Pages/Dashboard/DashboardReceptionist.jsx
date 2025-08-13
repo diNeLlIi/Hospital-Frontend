@@ -54,20 +54,6 @@ const Dashboard = () => {
                   <td><span className="status-badge pending">Pending</span></td>
                   <td><button className="action-btn edit">Edit</button></td>
                 </tr>
-                <tr>
-                  <td>2025-06-10</td>
-                  <td>1:00 PM</td>
-                  <td>Emily Tran</td>
-                  <td><span className="status-badge confirmed">Confirmed</span></td>
-                  <td><button className="action-btn edit">Edit</button></td>
-                </tr>
-                <tr>
-                  <td>2025-06-11</td>
-                  <td>3:30 PM</td>
-                  <td>Michael Lee</td>
-                  <td><span className="status-badge confirmed">Confirmed</span></td>
-                  <td><button className="action-btn edit">Edit</button></td>
-                </tr>
               </tbody>
             </table>
           </div>
@@ -88,12 +74,6 @@ const Dashboard = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td>Dr. Fernando</td>
-                  <td>Cardiologist</td>
-                  <td>9 AM - 1 PM</td>
-                  <td><button className="action-btn view">View</button></td>
-                </tr>
-                <tr>
                   <td>Dr. Patel</td>
                   <td>Dermatologist</td>
                   <td>1 PM - 4 PM</td>
@@ -113,13 +93,13 @@ const Dashboard = () => {
         {/* Bottom Row Sections */}
         <div className="dashboard-row">
           {/* Canceled Appointments */}
-          <div className="dashboard-section small">
+          <div className="dashboard-section small centered-section">
             <h3>Canceled Appointments</h3>
             <p className="large-stat">13</p>
           </div>
 
           {/* Quick Actions */}
-          <div className="dashboard-section small">
+          <div className="dashboard-section small centered-section">
             <h3>Quick Actions</h3>
             <div className="quick-actions">
               <button className="action-btn primary">Add New Appointment</button>
