@@ -1,20 +1,4 @@
-// import logo from './logo.svg';
-// import './App.css';
-// import Login from './Pages/LoginForm/Login';
-// import Dashboard from './Pages/Dashboard/Dashboard';
-
-// function App() {
-//   return (
-//     <div>
-//       <Dashboard/>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
-
+import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import ViewAppointment from './Pages/ViewAppointment/ViewAppointment';
@@ -29,4 +13,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;  // <---- Make sure this is here
