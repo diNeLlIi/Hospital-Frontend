@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
-import ViewAppointment from './Pages/ViewAppointment/ViewAppointment';
+import HomePage from './Pages/HomePage/HomePage';
 
 function App() {
   return (
     <Router>
       <div className="app-container">
-        <ViewAppointment />
+        <HomePage />
       </div>
     </Router>
   );
