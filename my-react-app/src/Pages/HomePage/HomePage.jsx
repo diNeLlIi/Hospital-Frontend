@@ -1,8 +1,11 @@
 import React from "react";
 import "./HomePage.css";
+import { useNavigate } from 'react-router-dom';
 import logoImage from '../../Components/Assets/logo.png';
 
-const HospitalLogin = () => {
+const HomePage = () => {
+  const navigate = useNavigate(); // Initialize navigate
+
   return (
     <div className="hospital-container">
       <div className="overlay">
@@ -15,10 +18,16 @@ const HospitalLogin = () => {
           />
         </div>
         <p className="subtitle">Efficient, Secure &amp; User-Friendly</p>
-        <button className="login-btn">Login</button>
+
+        <button 
+          className="login-btn"
+          onClick={() => navigate('/login')} // Fixed: onClick instead of nClick
+        >
+          Login
+        </button>
       </div>
     </div>
   );
 };
 
-export default HospitalLogin;
+export default HomePage;
