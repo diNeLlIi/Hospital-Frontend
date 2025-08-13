@@ -13,7 +13,9 @@
 
 .wrapper {
     width: 400px;
-    background: lch(#0F6D9F / 0.7); /* Darker blue with transparency */
+    /* background: lch(#0F6D9F / 0.7); */
+     /* Darker blue with transparency */
+     background-color: rgb(17, 17, 83);
     border: 2px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px); /* Reduced blur for better readability */
     box-shadow: 0 0 20px rgba(0, 0, 0, .5);
