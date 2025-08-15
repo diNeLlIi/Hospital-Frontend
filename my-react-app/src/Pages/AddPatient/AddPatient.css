@@ -1,0 +1,56 @@
+.appointments-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.patient-info, .appointment-summary {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.patient-info {
+  flex: 2;
+}
+
+.appointment-summary {
+  flex: 1;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+input, select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.confirm-btn {
+  background-color: #0074B7;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+}
+
+.cancel-btn {
+  background-color: #E53935;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+}

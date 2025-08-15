@@ -14,7 +14,7 @@ const Sidebar = () => {
     { icon: <MdDashboard size={20}/>, path: '/dashboard', label: 'Dashboard' },
     { icon: <TbReportMedical size={20}/>, path: '/appointments', label: 'Appointments' },
     { icon: <FaUserDoctor size={20}/>, path: '/doctors', label: 'Doctors' },
-    { icon: <CiMedicalCross size={20}/>, path: '/patients', label: 'Patients' },
+    { icon: <CiMedicalCross size={20}/>, path: '/add-patients', label: 'Patients' },
     { icon: <MdOutlinePersonSearch size={20}/>, path: '/staff', label: 'Staff' },
     { icon: <TbReport size={20}/>, path: '/reports', label: 'Reports' },
     { icon: <IoSettingsOutline size={20}/>, path: '/settings', label: 'Settings' },

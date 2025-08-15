@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../../Components/Layout/Layout';
 import './ReceptionistDashboard.css';
 
-const Dashboard = () => {
+const ReceptionistDashboard = () => {
   return (
     <Layout pageTitle="ReceptionistDashboard" pageNumber="98">
       <div className="dashboard-scroll-container">
@@ -137,4 +137,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default ReceptionistDashboard;
