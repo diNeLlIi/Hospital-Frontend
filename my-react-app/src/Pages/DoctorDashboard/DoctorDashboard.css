@@ -1,0 +1,347 @@
+/* Main Scroll Container */
+.dashboard-scroll-container {
+  height: calc(100vh - 150px);
+  overflow-y: auto;
+  padding: 20px;
+  background: #f7f7fa;
+}
+
+/* Dashboard Section Styles */
+.dashboard-section {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  color: #2d3748;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: #cbe0eb;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+}
+
+.stat-card h3 {
+  color: #4a5568;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  color: #2b6cb0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* Calendar Widget */
+.calendar-widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.react-calendar {
+  border: none;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  font-family: inherit;
+  font-size: 1.1rem; /* increased font size */
+  box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+  padding: 1rem 0.5rem;
+}
+
+/* Calendar Header (Month & Weekdays) */
+.react-calendar__navigation button {
+  font-size: 1.05rem; /* larger month nav text */
+  font-weight: 600;
+}
+
+.react-calendar__month-view__weekdays {
+  font-size: 0.95rem; /* larger weekdays */
+  font-weight: 500;
+}
+
+/* Calendar Tiles */
+.react-calendar__tile {
+  height: 90px; /* taller tiles */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 5px;
+  font-weight: 500;
+  font-size: 1rem; /* larger day numbers */
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.react-calendar__tile--active {
+  background: #3182ce !important;
+  color: #fff !important;
+}
+
+.react-calendar__tile--now {
+  background: #e2e8f0 !important;
+  color: #2b6cb0 !important;
+}
+
+/* Highlighted tiles - changed from green to light grey */
+.react-calendar__tile--highlight {
+  background: #e2e8f0; /* light grey */
+  color: #2b6cb0;
+}
+
+/* Special Day 16 tile */
+.react-calendar__tile--highlight.day-16 {
+  background: #b2c9d9 !important; /* slightly darker grey for day 16 */
+  color: #e0e940 !important;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.react-calendar__tile--highlight.day-16:hover {
+  background: #90acc1 !important;
+  transform: scale(1.05);
+}
+
+/* Appointment Times under Date */
+.appointment-times {
+  list-style: none;
+  margin: 3px 0 0 0;
+  padding: 0;
+  font-size: 0.65rem; /* larger */
+  color: #1a202c;
+  font-weight: 500;
+  text-align: center;
+}
+
+.appointment-times li {
+  margin: 2px 0;
+  background: #3182ce; 
+  color: #fff;
+  border-radius: 4px;
+  padding: 3px 5px; /* more padding */
+}
+
+/* Calendar Actions */
+.calendar-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.calendar-actions button {
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.calendar-actions button:hover {
+  background: #3182ce;
+  color: #fff;
+  border-color: #3182ce;
+}
+
+/* Scrollable Tables */
+.scrollable-table-container {
+  max-height: 210px;
+  overflow-y: auto;
+  margin-top: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.data-table th {
+  background-color: #edf2f7;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  color: #4a5568;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.data-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: #4a5568;
+  height: 50px;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-badge.confirmed {
+  background-color: #edf2f7;
+  color: #2b6cb0;
+}
+
+.status-badge.pending {
+  background-color: #feebc8;
+  color: #7b341e;
+}
+
+/* Buttons */
+.action-btn {
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.8rem;
+  border: none;
+}
+
+.action-btn.edit {
+  background: #ebf8ff;
+  color: #3182ce;
+  border: 1px solid #bee3f8;
+}
+
+.action-btn.confirmed {
+  background: #f0fff4;
+  color: #38a169;
+  border: 1px solid #c6f6d5;
+}
+
+.action-btn.primary {
+  background: #3182ce;
+  color: white;
+}
+
+/* Centered Sections */
+.centered-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem !important;
+}
+
+/* Dashboard Row Layout */
+.dashboard-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.dashboard-section.small {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.quick-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 250px;
+}
+
+.large-stat {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2b6cb0;
+  margin: 0.5rem 0;
+}
+
+/* Scrollbar Styling */
+.scrollable-table-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.scrollable-table-container::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 4px;
+}
+
+.scrollable-table-container::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* Special Day 16 View */
+.special-day-view {
+  text-align: center;
+  padding: 2rem;
+}
+
+.special-day-view p {
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .dashboard-row,
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-section.small {
+    min-height: auto;
+    padding: 1rem !important;
+  }
+
+  .dashboard-scroll-container {
+    height: calc(100vh - 120px);
+    padding: 15px;
+  }
+
+  .react-calendar {
+    max-width: 100%;
+  }
+
+  .calendar-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .calendar-actions button {
+    width: 100%;
+  }
+}

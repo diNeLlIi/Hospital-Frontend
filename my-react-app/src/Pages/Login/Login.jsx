@@ -15,7 +15,7 @@ const Login = () => {
   // Sample credentials for demonstration
   const validCredentials = {
     // admin: { email: 'admin@wellcare.com', password: 'admin123' },
-    // doctor: { email: 'doctor@wellcare.com', password: 'doc123' },
+    doctor: { email: 'doctor@wellcare.com', password: 'doc123' },
     receptionist: { email: 'rack@wellcare.com', password: '123' }
     // nurse: { email: 'nurse@wellcare.com', password: 'nurse123' }
   };

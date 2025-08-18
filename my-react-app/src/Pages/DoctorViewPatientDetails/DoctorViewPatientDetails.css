@@ -1,0 +1,115 @@
+/* Page Container inside Layout */
+.patient-details-page {
+  padding: 20px;
+  padding-top: 80px; /* Space for fixed header */
+  font-family: Arial, sans-serif;
+  background: #f7f7fa;
+  min-height: calc(100vh - 80px); /* Adjust for header height */
+  box-sizing: border-box;
+  overflow-y: auto; /* Scroll if content is long */
+}
+
+/* Card Container */
+.patient-details-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  max-width: 1000px;
+  margin: 0 auto; /* Center card */
+}
+
+/* Section Titles */
+.section h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #2d3748;
+  text-align: left;
+}
+
+/* Section Paragraphs - Flex layout */
+.section p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #4a5568;
+  display: flex;        /* Use flex to keep label and value inline */
+  flex-wrap: nowrap;    /* Prevent wrapping */
+  align-items: center;  /* Vertically align */
+  gap: 10px;            /* Space between label and value */
+}
+
+.section p span {
+  font-weight: 600;
+  color: #1c1b1f;
+  flex: 0 0 auto;       /* Label takes only necessary width */
+  white-space: nowrap;   /* Prevent label from breaking */
+}
+.section p .value {
+  flex: 1;               /* Value takes remaining space */
+  color: #4a5568;
+  text-align: left;     /* Align value to the left */
+}
+
+/* Profile Picture */
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+/* Centered Action Buttons */
+.action-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  justify-content: center; /* Center the buttons */
+}
+
+/* Buttons */
+.edit-btn {
+  background: #2f80ed;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.delete-btn {
+  background: #f56565;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Scrollable Container */
+.patient-details-page {
+  overflow-y: auto;
+  height: calc(100vh - 80px); /* Full height minus header */
+}
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+  .patient-details-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .patient-details-page {
+    padding-top: 70px; /* Adjust top padding for smaller screens */
+  }
+}
+.action-btn.edit {
+  background: #ebf8ff;
+  color: #3182ce;
+  border: 1px solid #bee3f8;
+}
