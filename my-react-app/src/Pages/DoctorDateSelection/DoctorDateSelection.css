@@ -260,7 +260,12 @@
   border: 1px solid #fed7d7;  /* soft red border */
 }
 
-.action-btn.primary {
+.action-btn.primary1 {
+  background: #3182ce;
+  color: white;
+}
+
+.action-btn.primary2 {
   background: #3182ce;
   color: white;
 }

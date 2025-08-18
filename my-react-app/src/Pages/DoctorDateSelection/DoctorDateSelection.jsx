@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
+import { useNavigate } from 'react-router-dom';
 import Layout from '../../Components/Layout/Layout';
 import './DoctorDateSelection.css';
 
@@ -41,10 +42,15 @@ const appointmentsData = {
 const DoctorDateSelection = () => {
   const [date, setDate] = useState(new Date());
   const [showDay16View, setShowDay16View] = useState(false);
+  const navigate = useNavigate();
 
   const handleDateClick = (selectedDate) => {
     setDate(selectedDate);
-    if (selectedDate.getDate() === 16) {
+    const day = selectedDate.getDate();
+
+    if (day === 7) {
+      navigate('/doctor-dashboard'); // 👈 Redirect on 7th day
+    } else if (day === 16) {
       setShowDay16View(true);
     } else {
       setShowDay16View(false);
@@ -194,8 +200,13 @@ const DoctorDateSelection = () => {
               <div className="dashboard-section small centered-section">
                 <h3>Quick Actions</h3>
                 <div className="quick-actions">
-                  <button className="action-btn primary">Refer Patient</button>
-                  <button className="action-btn primary">View Appointments</button>
+                  <button
+                className="action-btn primary1"
+                onClick={() => navigate('/doctor-view-patient-list')}
+              >
+                Refer Patient
+              </button>
+              <button className="action-btn primary2">View Appointments</button>
                   <button className="action-btn">Cancel Appointments</button>
                 </div>
               </div>

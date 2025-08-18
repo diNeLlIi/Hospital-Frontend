@@ -240,7 +240,12 @@
   border: 1px solid #c6f6d5;
 }
 
-.action-btn.primary {
+.action-btn.primary1 {
+  background: #3182ce;
+  color: white;
+}
+
+.action-btn.primary2 {
   background: #3182ce;
   color: white;
 }
