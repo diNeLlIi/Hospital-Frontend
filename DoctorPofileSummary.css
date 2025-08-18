@@ -1,119 +1,92 @@
-import React from 'react';
-import Layout from '../../Components/Layout/Layout';
-import './DoctorProfileSummary.css';
+.profile-container {
+  padding: 2rem;
+  background: linear-gradient(135deg, #a3bffa 0%, #96c93d 100%);
+  min-height: calc(100vh - 70px);
+  color: #2d3748;
+}
 
-const DoctorProfileSummary = () => {
-  const today = new Date(2025, 7, 17, 9, 32); // 09:32 AM +0530
-  const time = today.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Colombo' });
+.greeting-section {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-align: center;
+}
 
-  const doctorData = {
-    name: 'Dr. Nimal Perera',
-    firstName: 'Nimal',
-    lastName: 'Perera',
-    nationalId: '930345678V',
-    dateOfBirth: '1993/01/07',
-    gender: 'Male',
-    email: 'nimalperera@gmail.com',
-    contactNumber: '(+94) 77 346 5467',
-    address: '32, Kew Road, Rajagiriya.',
-    bloodGroup: 'A+',
-    medicalHistory: '-',
-    medicalDegree: 'MBBS',
-    specialization: 'Cardiology',
-    medicalSchool: 'University of Colombo Faculty of Medicine',
-    yearOfGraduation: '2014',
-    medicalLicenseNumber: 'SLMC-12345',
-    licenseExpiryDate: '2035-05-14',
-    medicalLicense: 'license452178.doc',
-    currentHospital: 'Gampaha General Hospital',
-    designation: 'Consultant Cardiologist',
-    yearsOfExperience: '15 years',
-    previousHospitals: 'Kandy General Hospital',
-  };
+.profile-section {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-  const handleEdit = () => {
-    alert('Edit Doctor Details');
-    // Navigate to edit form
-  };
+.profile-section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #2b6cb0;
+}
 
-  const handleDelete = () => {
-    alert('Delete Doctor?');
-    // Delete logic
-  };
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 1rem;
+}
 
-  return (
-    <Layout pageTitle="Dr. Nimal Perera" pageNumber="11">
-      <div className="profile-container">
-        <div className="greeting-section">Good Morning, Admin - {time}</div>
-        <div className="profile-section">
-          <h3>Personal Information</h3>
-          <div className="form-grid">
-            <label>First Name</label>
-            <p>{doctorData.firstName}</p>
-            <label>Last Name</label>
-            <p>{doctorData.lastName}</p>
-            <label>National ID / Passport No.</label>
-            <p>{doctorData.nationalId}</p>
-            <label>Date of Birth</label>
-            <p>{doctorData.dateOfBirth}</p>
-            <label>Gender</label>
-            <p>{doctorData.gender}</p>
-            <label>Email Address</label>
-            <p>{doctorData.email}</p>
-            <label>Contact Number</label>
-            <p>{doctorData.contactNumber}</p>
-            <label>Address</label>
-            <p>{doctorData.address}</p>
-          </div>
-        </div>
-        <div className="profile-section">
-          <h3>Educational (Medical) Qualifications</h3>
-          <div className="form-grid">
-            <label>Medical Degree</label>
-            <p>{doctorData.medicalDegree}</p>
-            <label>Specialization</label>
-            <p>{doctorData.specialization}</p>
-            <label>Medical School / University</label>
-            <p>{doctorData.medicalSchool}</p>
-            <label>Year of Graduation</label>
-            <p>{doctorData.yearOfGraduation}</p>
-            <label>Medical License Number</label>
-            <p>{doctorData.medicalLicenseNumber}</p>
-            <label>License Expiry Date</label>
-            <p>{doctorData.licenseExpiryDate}</p>
-            <label>Medical License</label>
-            <p>{doctorData.medicalLicense}</p>
-          </div>
-        </div>
-        <div className="profile-section">
-          <h3>Medical Information</h3>
-          <div className="form-grid">
-            <label>Blood Group</label>
-            <p>{doctorData.bloodGroup}</p>
-            <label>Medical History</label>
-            <p>{doctorData.medicalHistory}</p>
-          </div>
-        </div>
-        <div className="profile-section">
-          <h3>Work Information</h3>
-          <div className="form-grid">
-            <label>Current Hospital</label>
-            <p>{doctorData.currentHospital}</p>
-            <label>Designation</label>
-            <p>{doctorData.designation}</p>
-            <label>Years of Experience</label>
-            <p>{doctorData.yearsOfExperience}</p>
-            <label>Previous Hospitals / Workplaces</label>
-            <p>{doctorData.previousHospitals}</p>
-          </div>
-        </div>
-        <div className="action-buttons">
-          <button className="action-btn edit" onClick={handleEdit}>Edit</button>
-          <button className="action-btn delete" onClick={handleDelete}>Delete</button>
-        </div>
-      </div>
-    </Layout>
-  );
-};
+label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #4a5568;
+}
 
-export default DoctorProfileSummary;
+p {
+  font-size: 0.95rem;
+  color: #2d3748;
+  padding: 0.75rem;
+  background: #f9fafb;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.action-btn {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+}
+
+.action-btn.edit {
+  background: #2b6cb0;
+  color: white;
+}
+
+.action-btn.edit:hover {
+  background: #2c5282;
+}
+
+.action-btn.delete {
+  background: #e53e3e;
+  color: white;
+}
+
+.action-btn.delete:hover {
+  background: #c53030;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
