@@ -1,0 +1,331 @@
+/* Main Container */
+.nurses-page-container {
+  height: calc(100vh - 150px);
+  overflow-y: auto;
+  padding: 20px;
+  background: #f8fafc;
+}
+
+/* Content Area */
+.nurses-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Table Section */
+.nurses-table-section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Table Container */
+.nurses-table-container {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
+}
+
+/* Table Styles */
+.nurses-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.nurses-table thead {
+  background-color: #edf2f7;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nurses-table th {
+  padding: 1rem;
+  text-align: left;
+  color: #4a5568;
+  font-weight: 600;
+  border-bottom: 2px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.nurses-table td {
+  padding: 1rem;
+  color: #4a5568;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: middle;
+}
+
+/* Table Row Hover */
+.nurses-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.nurses-table tbody tr:hover {
+  background-color: #f7fafc;
+}
+
+/* Action Button */
+.action-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.85rem;
+  border: none;
+  font-weight: 500;
+  min-width: 80px;
+}
+
+.action-btn.edit {
+  background: #3182ce;
+  color: white;
+}
+
+.action-btn.edit:hover {
+  background: #2c5282;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(49, 130, 206, 0.3);
+}
+
+.action-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.3);
+}
+
+.action-btn:active {
+  transform: translateY(0);
+}
+
+/* Table Column Widths */
+.nurses-table th:nth-child(1),
+.nurses-table td:nth-child(1) {
+  width: 15%;
+  min-width: 100px;
+}
+
+.nurses-table th:nth-child(2),
+.nurses-table td:nth-child(2) {
+  width: 30%;
+  min-width: 200px;
+}
+
+.nurses-table th:nth-child(3),
+.nurses-table td:nth-child(3) {
+  width: 40%;
+  min-width: 220px;
+}
+
+.nurses-table th:nth-child(4),
+.nurses-table td:nth-child(4) {
+  width: 15%;
+  min-width: 120px;
+  text-align: center;
+}
+
+/* Row spacing and alternating colors for better readability */
+.nurses-table tbody tr:nth-child(even) {
+  background-color: #fafbfc;
+}
+
+.nurses-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.nurses-table tbody tr:hover {
+  background-color: #f0f4f8 !important;
+}
+
+/* Enhanced border styling for grid lines */
+.nurses-table th,
+.nurses-table td {
+  border-right: 1px solid #e2e8f0;
+}
+
+.nurses-table th:last-child,
+.nurses-table td:last-child {
+  border-right: none;
+}
+
+/* Scrollbar Styling */
+.nurses-table-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.nurses-table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.nurses-table-container::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 4px;
+}
+
+.nurses-table-container::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+.nurses-page-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.nurses-page-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+.nurses-page-container::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 5px;
+}
+
+.nurses-page-container::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+
+/* Loading State */
+.nurses-table-loading {
+  position: relative;
+}
+
+.nurses-table-loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e2e8f0;
+  border-top: 4px solid #3182ce;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .nurses-page-container {
+    padding: 15px;
+  }
+  
+  .nurses-table {
+    font-size: 0.85rem;
+  }
+  
+  .nurses-table th,
+  .nurses-table td {
+    padding: 0.75rem;
+  }
+  
+  .action-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nurses-page-container {
+    padding: 10px;
+    height: calc(100vh - 120px);
+  }
+  
+  .nurses-table {
+    font-size: 0.8rem;
+    min-width: 700px; /* Force horizontal scroll on small screens */
+  }
+  
+  .nurses-table th,
+  .nurses-table td {
+    padding: 0.6rem 0.5rem;
+  }
+  
+  .action-btn {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem;
+  }
+  
+  /* Adjust column widths for mobile */
+  .nurses-table th:nth-child(1),
+  .nurses-table td:nth-child(1) {
+    min-width: 80px;
+  }
+  
+  .nurses-table th:nth-child(2),
+  .nurses-table td:nth-child(2) {
+    min-width: 160px;
+  }
+  
+  .nurses-table th:nth-child(3),
+  .nurses-table td:nth-child(3) {
+    min-width: 180px;
+  }
+  
+  .nurses-table th:nth-child(4),
+  .nurses-table td:nth-child(4) {
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nurses-page-container {
+    padding: 8px;
+  }
+  
+  .nurses-table th,
+  .nurses-table td {
+    padding: 0.5rem 0.4rem;
+  }
+  
+  .action-btn {
+    padding: 0.25rem 0.6rem;
+    font-size: 0.7rem;
+    min-width: 60px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .nurses-page-container {
+    height: auto;
+    overflow: visible;
+    padding: 0;
+  }
+  
+  .nurses-table-container {
+    max-height: none;
+    overflow: visible;
+  }
+  
+  .action-btn {
+    display: none;
+  }
+  
+  .nurses-table th:nth-child(4),
+  .nurses-table td:nth-child(4) {
+    display: none;
+  }
+  
+  .nurses-table tbody tr:nth-child(even),
+  .nurses-table tbody tr:nth-child(odd) {
+    background-color: transparent;
+  }
+}
