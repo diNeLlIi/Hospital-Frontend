@@ -32,6 +32,8 @@ const DoctorDashboard = () => {
     <Layout pageTitle="DoctorDashboard" pageNumber="98">
       <div className="dashboard-scroll-container">
         {/* Dashboard Stats Section */}
+        <div className="dashboard-section-welcome">
+          <h2 className="section-title">Welcome, Dr.Nimal!</h2></div>
         <div className="dashboard-section">
           <h2 className="section-title">Dashboard</h2>
           <div className="stats-grid">
@@ -106,13 +108,15 @@ const DoctorDashboard = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td>Alice Perera</td>
+                  <td>Janith Liyanage</td>
                   <td>2.00PM</td>
                   <td>
                     <button className="action-btn confirmed">Confirmed</button>
                   </td>
                   <td>
-                    <button className="action-btn edit">Edit</button>
+                    <button
+                className="action-btn view"
+                onClick={() => navigate('/doctor-view-patient-details')}>View</button>
                   </td>
                 </tr>
                 <tr>
@@ -122,7 +126,9 @@ const DoctorDashboard = () => {
                     <button className="action-btn confirmed">Confirmed</button>
                   </td>
                   <td>
-                    <button className="action-btn edit">Edit</button>
+                    <button
+                className="action-btn view"
+                onClick={() => navigate('/doctor-view-patient-details')}>View</button>
                   </td>
                 </tr>
                 <tr>
@@ -132,7 +138,9 @@ const DoctorDashboard = () => {
                     <button className="action-btn confirmed">Confirmed</button>
                   </td>
                   <td>
-                    <button className="action-btn edit">Edit</button>
+                    <button
+                className="action-btn view"
+                onClick={() => navigate('/doctor-view-patient-details')}>View</button>
                   </td>
                 </tr>
                 <tr>
@@ -142,7 +150,9 @@ const DoctorDashboard = () => {
                     <button className="action-btn confirmed">Confirmed</button>
                   </td>
                   <td>
-                    <button className="action-btn edit">Edit</button>
+                    <button
+                className="action-btn view"
+                onClick={() => navigate('/doctor-view-patient-details')}>View</button>
                   </td>
                 </tr>
                 <tr>
@@ -152,7 +162,9 @@ const DoctorDashboard = () => {
                     <button className="action-btn confirmed">Confirmed</button>
                   </td>
                   <td>
-                    <button className="action-btn edit">Edit</button>
+                    <button
+                className="action-btn view"
+                onClick={() => navigate('/doctor-view-patient-details')}>View</button>
                   </td>
                 </tr>
               </tbody>
@@ -164,7 +176,7 @@ const DoctorDashboard = () => {
         <div className="dashboard-row">
           <div className="dashboard-section small centered-section">
             <h3>Canceled Appointments</h3>
-            <p className="large-stat">13</p>
+            <p className="large-stat">02</p>
           </div>
           <div className="dashboard-section small centered-section">
             <h3>Quick Actions</h3>
@@ -174,7 +186,7 @@ const DoctorDashboard = () => {
                 className="action-btn primary1"
                 onClick={() => navigate('/doctor-view-patient-list')}
               >
-                Refer Patient
+                View Patient Info
               </button>
               <button className="action-btn primary2">View Appointments</button>
               <button className="action-btn">Cancel Appointments</button>

@@ -1,5 +1,5 @@
-// src/Pages/DoctorViewPatientDetails/DoctorViewPatientList.jsx
 import React from 'react';
+import { useNavigate } from 'react-router-dom';   // <-- add this
 import Layout from '../../Components/Layout/Layout';
 import './DoctorViewPatientList.css';
 
@@ -17,6 +17,8 @@ const patients = [
 ];
 
 const DoctorViewPatientList = () => {
+  const navigate = useNavigate();  // <-- initialize hook
+
   return (
     <Layout pageTitle="Patient List" pageNumber="99">
       <div className="patient-list-container">
@@ -38,7 +40,12 @@ const DoctorViewPatientList = () => {
                     <td>{patient.id}</td>
                     <td>{patient.name}</td>
                     <td>
-                      <button className="action-btn edit">Edit</button>
+                      <button
+                        className="action-btn view"
+                        onClick={() => navigate('/doctor-view-patient-details')}
+                      >
+                        View
+                      </button>
                     </td>
                   </tr>
                 ))}
