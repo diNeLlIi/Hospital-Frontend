@@ -23,7 +23,6 @@ function App() {
         <Route path="/admin/doctors" element={<ViewAllDoctors />} />
         <Route path="/admin/receptionists" element={<ViewAllReceptionists />} />
         <Route path="/admin/nurses" element={<ViewAllNurses />} /> //add the Nurse in the sidebar.... 
-  
       </Routes>
     </Router>
   ); 
