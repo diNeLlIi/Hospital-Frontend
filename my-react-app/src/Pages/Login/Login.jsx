@@ -14,10 +14,9 @@ const Login = () => {
 
   // Sample credentials for demonstration
   const validCredentials = {
-    // admin: { email: 'admin@wellcare.com', password: 'admin123' },
+    admin: { email: 'admin@wellcare.com', password: 'admin123' },
     doctor: { email: 'doctor@wellcare.com', password: 'doc123' },
     receptionist: { email: 'rack@wellcare.com', password: '123' }
-    // nurse: { email: 'nurse@wellcare.com', password: 'nurse123' }
   };
 
   const handleChange = (e) => {
@@ -54,9 +53,6 @@ const Login = () => {
         case 'receptionist':
           navigate('/receptionist-dashboard');
           break;
-        case 'nurse':
-          navigate('/nurse-dashboard');
-          break;
         default:
           navigate('/');
       }
@@ -83,7 +79,6 @@ const Login = () => {
             <option value="admin">Admin</option>
             <option value="doctor">Doctor</option>
             <option value="receptionist">Receptionist</option>
-            <option value="nurse">Nurse</option>
           </select>
         </div>
         
