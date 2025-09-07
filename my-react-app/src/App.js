@@ -11,6 +11,10 @@ import DoctorDateSelection from './Pages/DoctorDateSelection/DoctorDateSelection
 import DoctorViewPatientDetails from './Pages/DoctorViewPatientDetails/DoctorViewPatientDetails';
 import DoctorViewPatientList from './Pages/DoctorViewPatientList/DoctorViewPatientList';
 import AddPatient from './Pages/AddPatient/AddPatient';
+import AdminDashboard from './Pages/Admin/AdminDashboard/AdminDashboard';
+import ViewAllDoctors from './Pages/Admin/Doctors/ViewAllDoctors';
+import ViewAllReceptionists from './Pages/Admin/Receptionists/ViewAllReceptionists';
+import ViewAllNurses from './Pages/Admin/Nurse/ViewAllNurses';
 
 function App() {
   return (
@@ -24,9 +28,13 @@ function App() {
         <Route path="/doctor-view-patient-details" element={<DoctorViewPatientDetails />} />
         <Route path="/doctor-view-patient-list" element={<DoctorViewPatientList />} />
         <Route path="/add-patients" element={<AddPatient />} />
+        <Route path="/admin-dashboard" element={<AdminDashboard/>}/>
+        <Route path="/admin/doctors" element={<ViewAllDoctors />} />
+        <Route path="/admin/receptionists" element={<ViewAllReceptionists />} />
+        <Route path="/admin/nurses" element={<ViewAllNurses />} /> //add the Nurse in the sidebar.... 
       </Routes>
     </Router>
-  );
+  ); 
 }
 
 export default App;
