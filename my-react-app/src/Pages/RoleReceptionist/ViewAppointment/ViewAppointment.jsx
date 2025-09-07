@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 import Layout from "../../../Components/Layout/Layout";
 import "./ViewAppointment.css";
-import doctorImg from "../../Components/Assets/docImg.png"; 
+import docImg from "../../../Components/Assets/docImg.png";
+
 
 const Appointment = () => {
   const [selectedDate, setSelectedDate] = useState("06 June 2025");
@@ -44,7 +45,7 @@ const Appointment = () => {
         </div>
 
         <div className="doctor-card">
-          <img src={doctorImg} alt="Doctor" className="doctor-image" />
+          <img src={docImg} alt="Doctor" className="doctor-image" />
           <div>
             <h3>Dr. Nimal Perera</h3>
             <p>Cardiologist</p>

@@ -1,3 +1,4 @@
+// Login.js - Updated to store user data in localStorage
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
@@ -14,10 +15,8 @@ const Login = () => {
 
   // Sample credentials for demonstration
   const validCredentials = {
-    admin: { email: 'admin@wellcare.com', password: 'admin123' },
-    //doctor: { email: 'doctor@wellcare.com', password: 'doc123' },
-    admin: { email: 'admin@wellcare.com', password: 'admin123' },
-    doctor: { email: 'doctor@wellcare.com', password: 'doc123' },
+    admin: { email: 'rack@wellcare.com', password: '123' },
+    doctor: { email: 'rack@wellcare.com', password: '123' },
     receptionist: { email: 'rack@wellcare.com', password: '123' }
   };
 
@@ -44,6 +43,9 @@ const Login = () => {
     // Check credentials
     if (email === validCredentials[role]?.email && 
         password === validCredentials[role]?.password) {
+      // Store user info in localStorage
+      localStorage.setItem('user', JSON.stringify({ role, email }));
+      
       // Successful login - navigate to appropriate dashboard
       switch(role) {
         case 'admin':

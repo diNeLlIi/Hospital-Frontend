@@ -1,5 +1,6 @@
+/* Sidebar.css */
 .wellcare-sidebar {
-  width: 200px;
+  width: 250px;
   height: calc(100vh - 70px);
   background-color: #ffffff;
   box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
@@ -7,6 +8,26 @@
   left: 0;
   top: 70px;
   padding: 1.5rem 0;
+  z-index: 100;
+}
+
+.user-info {
+  padding: 0 1.5rem 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 1rem;
+}
+
+.user-role {
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 0.25rem 0;
+  text-transform: capitalize;
+}
+
+.user-email {
+  color: #718096;
+  font-size: 0.875rem;
+  margin: 0;
 }
 
 .sidebar-menu {
@@ -16,8 +37,9 @@
 }
 
 .menu-item {
-  display: block;
-  padding: 0.8rem 2rem;
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
   color: #4a5568;
   font-weight: 500;
   cursor: pointer;
@@ -37,23 +59,34 @@
   font-weight: 600;
 }
 
-/* Add these to your existing Sidebar.css */
-.menu-item {
-  display: flex; /* Changed from block to flex */
-  align-items: center; /* Vertically center items */
-  padding: 0.8rem 1.5rem; /* Slightly reduced padding */
-}
-
 .menu-icon {
-  margin-right: 12px; /* Space between icon and text */
-  font-size: 1.2rem; /* Icon size */
-  display: inline-flex; /* Proper icon alignment */
+  margin-right: 12px;
+  font-size: 1.2rem;
+  display: inline-flex;
   align-items: center;
-  color: inherit; /* Inherit parent color */
+  color: inherit;
 }
 
-/* Ensure icons change color on hover/active */
 .menu-item:hover .menu-icon,
 .menu-item.active .menu-icon {
   color: inherit;
+}
+
+.no-menu-items,
+.no-user {
+  padding: 1.5rem;
+  text-align: center;
+  color: #718096;
+  font-size: 0.875rem;
+}
+
+.no-menu-items {
+  background-color: #fffaf0;
+  border: 1px solid #feebc8;
+  margin: 1rem;
+  border-radius: 4px;
+}
+
+.no-user {
+  padding-top: 3rem;
 }
