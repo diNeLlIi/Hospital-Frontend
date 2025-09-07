@@ -1,6 +1,6 @@
 // src/Pages/Appointment/Appointment.jsx
 import React, { useState } from "react";
-import Layout from "../../Components/Layout/Layout";
+import Layout from "../../../Components/Layout/Layout";
 import "./ViewAppointment.css";
 import doctorImg from "../../Components/Assets/docImg.png"; 
 

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Appointment.css";
-import Header from "../../Components/Header/Header";
-import Sidebar from "../../Components/Sidebar/Sidebar";
+import Header from "../../../Components/Header/Header";
+import Sidebar from "../../../Components/Sidebar/Sidebar";
 
 const doctors = [
   { name: "Dr. Nimal Perera", specialty: "Cardiologist", fee: 2400, image: "https://via.placeholder.com/60", available: true },
