@@ -1,6 +1,6 @@
 // src/Pages/DoctorViewPatientDetails/DoctorViewPatientDetails.jsx
 import React from "react";
-import Layout from "../../Components/Layout/Layout";
+import Layout from "../../../Components/Layout/Layout";
 import "./DoctorViewPatientDetails.css";
 
 const DoctorViewPatientDetails = () => {

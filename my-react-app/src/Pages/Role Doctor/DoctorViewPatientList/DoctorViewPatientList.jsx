@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';   // <-- add this
-import Layout from '../../Components/Layout/Layout';
+import Layout from '../../../Components/Layout/Layout';
 import './DoctorViewPatientList.css';
 
 const patients = [
