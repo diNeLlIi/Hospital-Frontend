@@ -34,263 +34,251 @@ const PatientRegistration = () => {
 
   return (
     <Layout pageTitle="Patient Registration" pageNumber="99">
-      <div className="registration-container">
-        <div className="registration-form">
-          <div className="form-grid">
-            {/* Personal Information */}
-            <div className="form-section">
-              <h2 className="section-title">Personal Information</h2>
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="firstName">First Name *</label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    placeholder="First Name"
-                    value={formData.firstName}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="lastName">Last Name *</label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    placeholder="Last Name"
-                    value={formData.lastName}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </div>
-              </div>
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="email">Email Address *</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="example@email.com"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="phone">Phone Number *</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    placeholder="(123) 456-7890"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </div>
-              </div>
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="dateOfBirth">Date of Birth *</label>
-                  <input
-                    type="date"
-                    id="dateOfBirth"
-                    name="dateOfBirth"
-                    value={formData.dateOfBirth}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="gender">Gender *</label>
-                  <select
-                    id="gender"
-                    name="gender"
-                    value={formData.gender}
-                    onChange={handleInputChange}
-                    required
-                  >
-                    <option value="">Select Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-
-            {/* Address Information */}
-            <div className="form-section">
-              <h2 className="section-title">Address Information</h2>
+      <div className="registration-form">
+        <div className="form-grid">
+          {/* Personal Information */}
+          <div className="form-section">
+            <h2 className="section-title">Personal Information</h2>
+            <div className="form-row">
               <div className="form-group">
-                <label htmlFor="streetAddress">Street Address *</label>
+                <label htmlFor="firstName">First Name *</label>
                 <input
                   type="text"
-                  id="streetAddress"
-                  name="streetAddress"
-                  placeholder="Street Address"
-                  value={formData.streetAddress}
-                  onChange={handleInputChange}
-                  required
-                />
-              </div>
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="city">City *</label>
-                  <input
-                    type="text"
-                    id="city"
-                    name="city"
-                    placeholder="City"
-                    value={formData.city}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="state">State *</label>
-                  <input
-                    type="text"
-                    id="state"
-                    name="state"
-                    placeholder="State"
-                    value={formData.state}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </div>
-              </div>
-              <div className="form-group">
-                <label htmlFor="postalCode">Postal Code *</label>
-                <input
-                  type="text"
-                  id="postalCode"
-                  name="postalCode"
-                  placeholder="Postal Code"
-                  value={formData.postalCode}
-                  onChange={handleInputChange}
-                  required
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="form-grid">
-            {/* Medical Information */}
-            <div className="form-section">
-              <h2 className="section-title">Medical Information</h2>
-              <div className="form-group">
-                <label htmlFor="bloodType">Blood Type</label>
-                <select
-                  id="bloodType"
-                  name="bloodType"
-                  value={formData.bloodType}
-                  onChange={handleInputChange}
-                >
-                  <option value="">Select Blood Type</option>
-                  <option value="A+">A+</option>
-                  <option value="A-">A-</option>
-                  <option value="B+">B+</option>
-                  <option value="B-">B-</option>
-                  <option value="AB+">AB+</option>
-                  <option value="AB-">AB-</option>
-                  <option value="O+">O+</option>
-                  <option value="O-">O-</option>
-                </select>
-              </div>
-              <div className="form-group">
-                <label htmlFor="allergies">Known Allergies</label>
-                <input
-                  type="text"
-                  id="allergies"
-                  name="allergies"
-                  placeholder="Enter Known Allergies (Optional)"
-                  value={formData.allergies}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="medicalHistory">Medical History</label>
-                <textarea
-                  id="medicalHistory"
-                  name="medicalHistory"
-                  placeholder="Enter medical history, current medications, or other relevant information (Optional / max 500 characters)"
-                  value={formData.medicalHistory}
-                  onChange={handleInputChange}
-                  maxLength="500"
-                  rows="4"
-                />
-                <div className="character-count">
-                  {formData.medicalHistory.length}/500 characters
-                </div>
-              </div>
-            </div>
-
-            {/* Emergency Contact */}
-            <div className="form-section">
-              <h2 className="section-title">Emergency Contact</h2>
-              <div className="form-group">
-                <label htmlFor="emergencyContactName">Contact Name *</label>
-                <input
-                  type="text"
-                  id="emergencyContactName"
-                  name="emergencyContactName"
-                  placeholder="Emergency Contact Name"
-                  value={formData.emergencyContactName}
+                  id="firstName"
+                  name="firstName"
+                  placeholder="First Name"
+                  value={formData.firstName}
                   onChange={handleInputChange}
                   required
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="emergencyContactNumber">Contact Number *</label>
+                <label htmlFor="lastName">Last Name *</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Last Name"
+                  value={formData.lastName}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+            </div>
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="email">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="example@email.com"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="phone">Phone Number *</label>
                 <input
                   type="tel"
-                  id="emergencyContactNumber"
-                  name="emergencyContactNumber"
-                  placeholder="Emergency Contact Number"
-                  value={formData.emergencyContactNumber}
+                  id="phone"
+                  name="phone"
+                  placeholder="(123) 456-7890"
+                  value={formData.phone}
                   onChange={handleInputChange}
                   required
                 />
               </div>
             </div>
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="dateOfBirth">Date of Birth *</label>
+                <input
+                  type="date"
+                  id="dateOfBirth"
+                  name="dateOfBirth"
+                  value={formData.dateOfBirth}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="gender">Gender *</label>
+                <select
+                  id="gender"
+                  name="gender"
+                  value={formData.gender}
+                  onChange={handleInputChange}
+                  required
+                >
+                  <option value="">Select Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
           </div>
 
-          <div className="form-actions">
-            <button type="button" className="submit-button" onClick={handleSubmit}>
-              Complete Registration
-            </button>
+          {/* Address Information */}
+          <div className="form-section">
+            <h2 className="section-title">Address Information</h2>
+            <div className="form-group">
+              <label htmlFor="streetAddress">Street Address *</label>
+              <input
+                type="text"
+                id="streetAddress"
+                name="streetAddress"
+                placeholder="Street Address"
+                value={formData.streetAddress}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="city">City *</label>
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  placeholder="City"
+                  value={formData.city}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="state">State *</label>
+                <input
+                  type="text"
+                  id="state"
+                  name="state"
+                  placeholder="State"
+                  value={formData.state}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+            </div>
+            <div className="form-group">
+              <label htmlFor="postalCode">Postal Code *</label>
+              <input
+                type="text"
+                id="postalCode"
+                name="postalCode"
+                placeholder="Postal Code"
+                value={formData.postalCode}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
           </div>
+        </div>
+
+        <div className="form-grid">
+          {/* Medical Information */}
+          <div className="form-section">
+            <h2 className="section-title">Medical Information</h2>
+            <div className="form-group">
+              <label htmlFor="bloodType">Blood Type</label>
+              <select
+                id="bloodType"
+                name="bloodType"
+                value={formData.bloodType}
+                onChange={handleInputChange}
+              >
+                <option value="">Select Blood Type</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+              </select>
+            </div>
+            <div className="form-group">
+              <label htmlFor="allergies">Known Allergies</label>
+              <input
+                type="text"
+                id="allergies"
+                name="allergies"
+                placeholder="Enter Known Allergies (Optional)"
+                value={formData.allergies}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="medicalHistory">Medical History</label>
+              <textarea
+                id="medicalHistory"
+                name="medicalHistory"
+                placeholder="Enter medical history, current medications, or other relevant information (Optional / max 500 characters)"
+                value={formData.medicalHistory}
+                onChange={handleInputChange}
+                maxLength="500"
+                rows="4"
+              />
+              <div className="character-count">
+                {formData.medicalHistory.length}/500 characters
+              </div>
+            </div>
+          </div>
+
+          {/* Emergency Contact */}
+          <div className="form-section">
+            <h2 className="section-title">Emergency Contact</h2>
+            <div className="form-group">
+              <label htmlFor="emergencyContactName">Contact Name *</label>
+              <input
+                type="text"
+                id="emergencyContactName"
+                name="emergencyContactName"
+                placeholder="Emergency Contact Name"
+                value={formData.emergencyContactName}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="emergencyContactNumber">Contact Number *</label>
+              <input
+                type="tel"
+                id="emergencyContactNumber"
+                name="emergencyContactNumber"
+                placeholder="Emergency Contact Number"
+                value={formData.emergencyContactNumber}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="form-actions">
+          <button type="button" className="submit-button" onClick={handleSubmit}>
+            Complete Registration
+          </button>
         </div>
       </div>
 
       <style jsx>{`
-        .registration-container {
-          padding: 2rem;
-          margin-left: 250px; /* Account for sidebar width */
-          padding-top: 90px; /* Account for header height */
-          min-height: 100vh;
-          background-color: #f7fafc;
-          transition: margin-left 0.3s ease;
-        }
-        
         .registration-form {
           background-color: white;
-          border-radius: 12px;
-          padding: 2.5rem;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
+          padding: 2rem;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
           max-width: 100%;
-          margin: 0 auto;
         }
 
         .form-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 3rem;
-          margin-bottom: 2.5rem;
+          margin-bottom: 2rem;
         }
 
         .form-section {
@@ -305,13 +293,13 @@ const PatientRegistration = () => {
           color: #2d3748;
           margin: 0;
           border-bottom: 2px solid #e2e8f0;
-          padding-bottom: 0.75rem;
+          padding-bottom: 0.5rem;
         }
 
         .form-row {
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 1.25rem;
+          gap: 1rem;
         }
 
         .form-group {
@@ -327,11 +315,11 @@ const PatientRegistration = () => {
         }
 
         input, select, textarea {
-          padding: 0.875rem;
+          padding: 0.75rem;
           border: 1px solid #cbd5e0;
-          border-radius: 8px;
+          border-radius: 6px;
           font-size: 0.875rem;
-          transition: all 0.2s;
+          transition: border-color 0.2s;
           font-family: inherit;
         }
 
@@ -347,16 +335,11 @@ const PatientRegistration = () => {
 
         select {
           cursor: pointer;
-          appearance: none;
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%234a5568'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
-          background-repeat: no-repeat;
-          background-position: right 0.75rem center;
-          background-size: 1.25rem;
         }
 
         textarea {
           resize: vertical;
-          min-height: 120px;
+          min-height: 100px;
         }
 
         .character-count {
@@ -375,19 +358,17 @@ const PatientRegistration = () => {
         .submit-button {
           background-color: #3182ce;
           color: white;
-          padding: 0.875rem 2.5rem;
+          padding: 0.75rem 2rem;
           border: none;
-          border-radius: 8px;
+          border-radius: 6px;
           font-weight: 600;
           cursor: pointer;
           transition: background-color 0.2s;
-          font-size: 1rem;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          font-size: 0.875rem;
         }
 
         .submit-button:hover {
           background-color: #2c5aa0;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .submit-button:active {
@@ -395,41 +376,24 @@ const PatientRegistration = () => {
         }
 
         /* Responsive Design */
-        @media (max-width: 1200px) {
-          .registration-container {
-            margin-left: 200px;
-          }
-        }
-
         @media (max-width: 1024px) {
-          .registration-container {
-            margin-left: 0;
-            padding: 1.5rem;
-            padding-top: 80px;
-          }
-          
           .form-grid {
             grid-template-columns: 1fr;
             gap: 2rem;
           }
           
           .registration-form {
-            padding: 2rem;
+            padding: 1.5rem;
           }
         }
 
         @media (max-width: 768px) {
-          .registration-container {
-            padding: 1rem;
-            padding-top: 70px;
-          }
-          
           .form-row {
             grid-template-columns: 1fr;
           }
           
           .registration-form {
-            padding: 1.5rem;
+            padding: 1rem;
           }
           
           .form-grid {
@@ -447,21 +411,12 @@ const PatientRegistration = () => {
         }
 
         @media (max-width: 480px) {
-          .registration-container {
-            padding: 0.75rem;
-            padding-top: 70px;
-          }
-          
-          .registration-form {
-            padding: 1.25rem;
-          }
-          
           .form-actions {
             padding-top: 1.5rem;
           }
           
           input, select, textarea {
-            padding: 0.75rem;
+            padding: 0.875rem;
           }
         }
       `}</style>
