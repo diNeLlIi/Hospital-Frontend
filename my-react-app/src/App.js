@@ -10,6 +10,8 @@ import ReceptionistDashboard from './Pages/RoleReceptionist/ReceptionistDashboar
 import AddPatient from './Pages/RoleReceptionist/AddPatient/AddPatient';
 import Appiointments from './Pages/RoleReceptionist/Appointment/Appointment';
 import ViewAppointment from './Pages/RoleReceptionist/ViewAppointment/ViewAppointment';
+import PatientRegistration from './Pages/RoleReceptionist/PatientRegistration/PatientRegistration';
+import PatientList from './Pages/RoleReceptionist/PatientList/PatientList.tsx'
 
 import DoctorDashboard from './Pages/RoleDoctor/DoctorDashboard/DoctorDashboard';
 import DoctorDateSelection from './Pages/RoleDoctor/DoctorDateSelection/DoctorDateSelection';
@@ -33,6 +35,8 @@ function App() {
         <Route path ="/add-patients" element={<AddPatient />} />
         <Route path="/appointments" element={<Appiointments />} />
         <Route path="/view-appointment" element={<ViewAppointment />} />
+        <Route path="/patient-registration" element={<PatientRegistration />} />
+        <Route path="/patient-list" element={<PatientList/>} />
 
         <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
         <Route path="/doctor-date-selection" element={<DoctorDateSelection />} />

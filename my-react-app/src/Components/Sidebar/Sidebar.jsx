@@ -70,7 +70,7 @@ const Sidebar = () => {
       { icon: <MdDashboard size={20}/>, path: '/receptionist-dashboard', label: 'Dashboard' },
       { icon: <FaUserDoctor size={20}/>, path: '/doctors', label: 'Doctors' },
       { icon: <TbReportMedical size={20}/>, path: '/appointments', label: 'Appointments' },
-      { icon: <CiMedicalCross size={20}/>, path: '/add-patients', label: 'Patients' },
+      { icon: <CiMedicalCross size={20}/>, path: '/patient-list', label: 'Patients' },
     ]
   };
 
