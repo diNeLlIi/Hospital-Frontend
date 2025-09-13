@@ -21,6 +21,8 @@ import AdminDashboard from './Pages/Admin/AdminDashboard/AdminDashboard';
 import ViewAllDoctors from './Pages/Admin/Doctors/ViewAllDoctors';
 import ViewAllNurses from './Pages/Admin/Nurse/ViewAllNurses';
 import ViewAllReceptionists from './Pages/Admin/Receptionists/ViewAllReceptionists';
+import ReceptionistRegistration from './Pages/Admin/ReceptionistRegistration/ReceptionistRegistration.jsx';
+import DoctorRegistration from './Pages/Admin/DoctorRegistration/DoctorRegistration.jsx';
 
 
 
@@ -46,6 +48,8 @@ function App() {
         <Route path="/admin/doctors" element={<ViewAllDoctors />} />
         <Route path="/admin/receptionists" element={<ViewAllReceptionists />} />
         <Route path="/admin/nurses" element={<ViewAllNurses />} />
+        <Route path="/admin/add-receptionist" element={<ReceptionistRegistration />} />
+        <Route path="/admin/add-doctor" element={<DoctorRegistration />} />
       </Routes>
     </Router>
   ); 

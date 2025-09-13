@@ -79,6 +79,21 @@ const ViewAllDoctors = () => {
     // - Call API to get doctor details for editing
   };
 
+  // Delete doctor function
+  const handleDeleteDoctor = (doctorId, doctorName) => {
+    const confirmDelete = window.confirm(`Are you sure you want to delete ${doctorName}?`);
+    
+    if (confirmDelete) {
+      setDoctors(doctors.filter(doctor => doctor.id !== doctorId));
+      console.log(`Doctor deleted: ${doctorName} (ID: ${doctorId})`);
+      
+      // You can add additional delete logic here:
+      // - Call API to delete from database
+      // - Show success message
+      // - Log the action
+    }
+  };
+
   return (
     <Layout pageTitle="Doctors" pageNumber="8">
       <div className="doctors-page-container">
@@ -107,6 +122,12 @@ const ViewAllDoctors = () => {
                           onClick={() => handleEditDoctor(doctor.id, doctor.name)}
                         >
                           Edit
+                        </button>
+                        <button 
+                          className="action-btn delete"
+                          onClick={() => handleDeleteDoctor(doctor.id, doctor.name)}
+                        >
+                          Delete
                         </button>
                       </td>
                     </tr>
