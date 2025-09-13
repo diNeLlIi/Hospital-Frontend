@@ -1,14 +1,13 @@
 // src/App.js
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 
 import HomePage from './Pages/HomePage/HomePage';
 import Login from './Pages/Login/Login';
 
-import ReceptionistDashboard from './Pages/RoleReceptionist/ReceptionistDashboard/ReceptionistDashboard';
 import AddPatient from './Pages/RoleReceptionist/AddPatient/AddPatient';
 import Appiointments from './Pages/RoleReceptionist/Appointment/Appointment';
+import ReceptionistDashboard from './Pages/RoleReceptionist/ReceptionistDashboard/ReceptionistDashboard';
 import ViewAppointment from './Pages/RoleReceptionist/ViewAppointment/ViewAppointment';
 import PatientRegistration from './Pages/RoleReceptionist/PatientRegistration/PatientRegistration';
 import PatientList from './Pages/RoleReceptionist/PatientList/PatientList.tsx'
@@ -18,10 +17,10 @@ import DoctorDateSelection from './Pages/RoleDoctor/DoctorDateSelection/DoctorDa
 import DoctorViewPatientDetails from './Pages/RoleDoctor/DoctorViewPatientDetails/DoctorViewPatientDetails';
 import DoctorViewPatientList from './Pages/RoleDoctor/DoctorViewPatientList/DoctorViewPatientList';
 
-import ViewAllDoctors from './Pages/Admin/Doctors/ViewAllDoctors';
-import ViewAllReceptionists from './Pages/Admin/Receptionists/ViewAllReceptionists';
-import ViewAllNurses from './Pages/Admin/Nurse/ViewAllNurses';
 import AdminDashboard from './Pages/Admin/AdminDashboard/AdminDashboard';
+import ViewAllDoctors from './Pages/Admin/Doctors/ViewAllDoctors';
+import ViewAllNurses from './Pages/Admin/Nurse/ViewAllNurses';
+import ViewAllReceptionists from './Pages/Admin/Receptionists/ViewAllReceptionists';
 
 
 
@@ -29,7 +28,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/homepage" element={<HomePage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/receptionist-dashboard" element={<ReceptionistDashboard />} />
         <Route path ="/add-patients" element={<AddPatient />} />
